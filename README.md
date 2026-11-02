@@ -8,7 +8,7 @@ Sem bibliotecas externas — driver SPI e protocolo escritos à mão para fins d
 ## Hardware
 
 - ESP32-WROOM-32
-- XL1276-P01 (SX1276 433MHz)
+- XL1278-SMT (XL1278 433MHz)
 - Capacitor 100nF (desacoplamento)
 - Fio 17,3cm como antena quarter-wave
 
@@ -92,11 +92,11 @@ idf.py -p COM3 flash monitor            # Windows
 
 ## O que esperar no monitor serial
 
-**Primeiro boot (SX1276 detectado):**
+**Primeiro boot (XL1278 detectado):**
 ```
 I (320) SPI: SPI inicializado — SCK:5 MOSI:27 MISO:19 CS:18 RST:14
-I (340) SX1276: SX1276 detectado. Version=0x12
-I (360) SX1276: SX1276 configurado: 433MHz SF7 BW125 CR4/5 CRC:on
+I (340) XL1278: XL1278 detectado. Version=0x12
+I (360) XL1278: XL1278 configurado: 433MHz SF7 BW125 CR4/5 CRC:on
 I (380) MESH: Mesh iniciada — endereco: 0x01
 I (400) MESH: Task de recepcao iniciada
 I (2400) MESH: Enviado para 0xFF: "ola da mesh! no=0x01 count=0"
@@ -107,10 +107,10 @@ I (2400) MESH: Enviado para 0xFF: "ola da mesh! no=0x01 count=0"
 I (xxxx) MESH: MENSAGEM de 0x02 [RSSI:-65dBm]: "ola da mesh! no=0x02 count=0"
 ```
 
-**Se SX1276 não responder:**
+**Se XL1278 não responder:**
 ```
-E (340) SX1276: SX1276 nao encontrado! Version=0x00 (esperado 0x12)
-E (340) SX1276: Verifique a pinagem e a solda.
+E (340) XL1278: SX1276 nao encontrado! Version=0x00 (esperado 0x12)
+E (340) XL1278: Verifique a pinagem e a solda.
 ```
 → Revisar conexões conforme `circuit.md`
 
