@@ -143,17 +143,6 @@ A (tx) ──LoRa──▶ B (relay, ttl-1) ──LoRa──▶ C (destino)
 
 ---
 
-## Evoluções possíveis
-
-- [ ] Interrupção em DIO0 (ao invés de polling) para menor consumo
-- [ ] BLE para interface com celular (substituir Meshtastic)
-- [ ] GPS para tracking de posição na malha
-- [ ] Deep sleep entre transmissões para uso em campo
-- [ ] ACK + retransmissão garantida
-- [ ] Criptografia básica do payload
-
----
-
 ## Segundo nó
 
 Para ter comunicação real, o amigo monta o mesmo circuito e grava o mesmo firmware com `MY_ADDR 0x02`.  
