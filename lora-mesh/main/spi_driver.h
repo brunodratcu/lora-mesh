@@ -3,7 +3,7 @@
 #include "driver/spi_master.h"
 #include "driver/gpio.h"
 
-// Pinagem ESP32 + XL1276
+// Pinagem ESP32 + XL1278-SMT
 #define PIN_SCK     5
 #define PIN_MOSI    27
 #define PIN_MISO    19
