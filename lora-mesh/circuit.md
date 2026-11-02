@@ -1,4 +1,4 @@
-# Circuito — ESP32 + XL1276 (SX1276) LoRa 433MHz
+# Circuito — ESP32 + XL1278 LoRa 433MHz
 
 ## Componentes
 
@@ -17,40 +17,16 @@
 ## Pinagem
 
 ```
-XL1276 (SX1276)    ESP32
-───────────────    ─────
-VCC            →   3.3V   ← NUNCA 5V, queima o módulo
-GND            →   GND
-SCK            →   GPIO5
-MOSI           →   GPIO27
-MISO           →   GPIO19
-NSS (CS)       →   GPIO18
-RST            →   GPIO14
-DIO0           →   GPIO26
-ANT            →   fio 17,3cm (antena)
-```
-
 ---
-
-## Diagrama
-
-```
-                      3.3V ──┬──── XL1276 VCC
-                             │
-                          [100nF]   ← perto do módulo
-                             │
-                       GND ──┴──── XL1276 GND
-
-ESP32 GPIO5  ─────────────────────  XL1276 SCK
-ESP32 GPIO27 ─────────────────────  XL1276 MOSI
-ESP32 GPIO19 ─────────────────────  XL1276 MISO
-ESP32 GPIO18 ─────────────────────  XL1276 NSS
-ESP32 GPIO14 ─────────────────────  XL1276 RST
-ESP32 GPIO26 ─────────────────────  XL1276 DIO0
-
-                                    XL1276 ANT ── fio 17,3cm
-```
-
+ESP32 GPIO	Fio	XL1278-SMT pad
+GPIO 5	SCK	SCK
+GPIO 27	MOSI	MOSI
+GPIO 19	MISO	MISO
+GPIO 18	CS	NSS
+GPIO 14	RST	NRESET
+GPIO 26	DIO0	DIO0
+3.3 V	alimentação	VCC
+GND	terra	GND
 ---
 
 ## Antena
